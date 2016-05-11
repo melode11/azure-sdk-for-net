@@ -538,14 +538,14 @@ namespace DataFactory.Tests.Framework.JsonSamples
         structure:
         [
             { name: ""PartitionKey"", type: ""Guid"" },
-            { name: ""RowKey"", type: ""String"" }, 
+            { name: ""RowKey"", type: ""String"" },
             { name: ""Timestamp"", type: ""String"" },
             { name: ""game_id "", type: ""String"" },
         ],
         typeProperties:
-        {        
+        {
             folderPath: ""MyContainer\\MySubFolder\\$Date\\$Time\\FileName$Date$Time\\{PartitionKey}"",
-            fileName: ""TestBlobName"",   
+            fileName: ""TestBlobName"",
             format:
             {
                 type: ""OrcFormat""
@@ -555,11 +555,11 @@ namespace DataFactory.Tests.Framework.JsonSamples
                 { name: ""PartitionKey"", value: { type: ""DateTime"", date: ""SliceStart"", format: ""yyyy-MM-dd"" } },
             ]
         },
-         availability:
+        availability:
         {
-            interval: 1, 
+            interval: 1,
             frequency: ""Hour"",
-            style: ""StartOfInterval""     
+            style: ""StartOfInterval""
         },
         policy:
         {
